@@ -98,9 +98,9 @@ console.log(123 == '123'); //true
 let str = "20";
 let h = 5;
 document.write(str + h + "<br/>"); //( число 5 стає стрінговим і просто "дописується" поруч з 20 - виходить 205 стрінг )
-document.write(str - h + "<br/>"); // (20 - 5 = 15 ??? чому в цьому випадку не діє попереднє правило ? )
-document.write(str * "2" + "<br/>"); // ( 40 число ??? )
-document.write(str / 2 + "<br/>"); // (  10 число ??? )
+document.write(str - h + "<br/>"); // (20 )
+document.write(str * "2" + "<br/>"); // ( 40  )
+document.write(str / 2 + "<br/>"); // (  10  )
 
 
 
