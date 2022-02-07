@@ -35,7 +35,7 @@
 
  if (number === 10) {
      console.log('Вірно')
- } else if (number != 10) {
+ } else if (number !=== 10) {
      console.log('Невірно')
  }
 
