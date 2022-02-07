@@ -74,3 +74,20 @@ while( i < 10 ) {
 
 }
 
+// З допомогою циклу for of та for in виведемо весь масив
+
+let users = [
+    {name: 'Olga', age: 23, status: false},
+    {name: 'Arina', age: 21, status: true},
+    {name: 'Mary', age: 19, status: true},
+    {name: 'Marta', age: 20, status: false}
+];
+
+for (let user of users) {
+    document.write('<ul>')
+    for (let key in user) {
+        document.write(`<li>${key} - ${user[key]}`)
+    }
+    document.write('</ul>')
+}
+

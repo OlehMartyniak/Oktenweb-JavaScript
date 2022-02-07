@@ -52,9 +52,17 @@ console.log(s);
 
 let heightC = 10;
 let dC = 4;
-let v = (3.14 * dC * heightC);
+let radius = dC / 2;
+let v = (3.14 * radius**2 * heightC);
 console.log(v);
 
 // 7. У прямокутного трикутника дві сторони n (зі значенням 3) та m (зі значенням 4).
 // Знайдіть гіпотенузу k за теоремою Піфагора (потрібно використовувати функцію Math.pow (число, ступінь) або оператор
 // зведення в ступінь **).
+
+let n = 3;
+let m = 4;
+let p = n**2 + m**2;
+let k = Math.sqrt(p);
+
+console.log(k)
