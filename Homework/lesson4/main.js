@@ -75,7 +75,7 @@ createManyLi('Hi guys', '10')
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 
 function getPrimitiveElements(arguments) {
-    for (item of arguments) {
+    for (let item of arguments) {
         if (typeof item === 'number') {
             document.write(`<ul> List of numbers:`)
             document.write(`<li>${item}</li>`)
