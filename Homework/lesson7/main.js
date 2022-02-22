@@ -53,17 +53,21 @@ class Client {
 }
 let clients = [
     new Client(1,'Bart','Simps','user1@gmail.com',342536,['book','eggs','tea']),
-    new Client(2,'Bart','Simps','user1@gmail.com',342536,['book','eggs','tea']),
-    new Client(3,'Bart','Simps','user1@gmail.com',342536,['book','eggs','tea']),
-    new Client(4,'Bart','Simps','user1@gmail.com',342536,['book','eggs','tea']),
+    new Client(2,'Bart','Simps','user1@gmail.com',342536,['book','eggs','tea','bread']),
+    new Client(3,'Bart','Simps','user1@gmail.com',342536,['book','eggs','tea','fat','sweets']),
+    new Client(4,'Bart','Simps','user1@gmail.com',342536,['book','eggs']),
     new Client(5,'Bart','Simps','user1@gmail.com',342536,['book','eggs','tea']),
-    new Client(6,'Bart','Simps','user1@gmail.com',342536,['book','eggs','tea']),
-    new Client(7,'Bart','Simps','user1@gmail.com',342536,['book','eggs','tea']),
-    new Client(8,'Bart','Simps','user1@gmail.com',342536,['book','eggs','tea']),
-    new Client(9,'Bart','Simps','user1@gmail.com',342536,['book','eggs','tea']),
+    new Client(6,'Bart','Simps','user1@gmail.com',342536,['book','eggs','tea','chocolate']),
+    new Client(7,'Bart','Simps','user1@gmail.com',342536,['book','eggs','tea','chocolate','ice-cream']),
+    new Client(8,'Bart','Simps','user1@gmail.com',342536,['book','eggs']),
+    new Client(9,'Bart','Simps','user1@gmail.com',342536,['book']),
     new Client(10,'Bart','Simps','user1@gmail.com',342536,['book','eggs','tea'])
     ];
 console.log(clients);
+
+// - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
+
+console.log(clients.sort((a,b) => a.order.length - b.order.length));
 
 
 
