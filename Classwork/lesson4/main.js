@@ -129,17 +129,7 @@ function arrReverse (array) {
 }
 console.log(arrReverse(arr));
 
-//                  Additional tasks ( Ще працюю над виконанням цього завдання)
 
-//- створити функцію, яка якщо приймає один аргумент, просто виводить його, якщо два аргументи - складає або конкатенує їх між собою.
-
-// function add1 (arguments) {
-//   for (i = 0; i < arguments.length; i++) {
-//       if ()
-//   }
-// }
-// console.log(add1(12, 13));
-//
 
 
 
