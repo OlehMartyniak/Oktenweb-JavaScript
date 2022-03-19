@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    div {margin: 25px 0}
+</style>
+
+<div>
+<button id="btn1">Button 1</button>
+</div>
+
+<div>
+<button id="btn2">Button 2</button>
+</div>
+
+<div>
+    <h2 id="title"></h2>
+</div>
+
+<h4>1) Введені пароль і логін будуть відображатись у консолі (при цьому сторінка не буде перезавантажуватись) </h4>
+
+<form action="">
+    <input type="text" name="login" placeholder="Login">
+    <input type="text" name="password" placeholder="Password">
+    <button>Sign in</button>
+</form>
+
+<h4>2) Введені пароль і логін будуть пакуватись в обʼєкт, а він в свою чергу в масив і виводитись в консоль</h4>
+
+<form action="">
+    <input type="text" name="login2" placeholder="Login">
+    <input type="text" name="password2" placeholder="Password">
+    <button>Sign in</button>
+</form>
+
+<h4>3) Якщо тут будуть введено слово "fuck", то виникатиме Alert "Don`t use bad words"</h4>
+
+<form action="">
+    <input type="text" name="login3" placeholder="Enter your nickname">
+    <input type="text" name="password3" placeholder="Password">
+    <button>Log in</button>
+</form>
+
+<h4>4) Створимо фільтр для масиву. Якщо вводити одне з імен (Olga,Anna,Mary,Alina,Julia), то будемо виводити інформацію про цього користувача в li </h4>
+
+<form action="">
+    <input type="text" name="findName" placeholder="Enter user`s name">
+    <button>Search</button>
+</form>
+
+<h4>Ця форма працює схоже з попередньою, але виводить інформацію в окремі "li"</h4>
+
+<form action="">
+    <input type="text" name="findName2" placeholder="Enter user`s name">
+    <button>Search</button>
+</form>
+
+<ul id="results"></ul>
+
+<h4>Створимо checkbox, який прийматиме наш масив і виводитиме користувачів з статусом true, якщо на нього нажати, або false</h4>
+<div>
+    <span>Status: true</span>
+    <input type="checkbox" name="status" id="chBox-true">
+</div>
+<div>
+    <span>Status: false</span>
+    <input type="checkbox" name="status" id="chBox-false">
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
