@@ -87,5 +87,48 @@ console.log(parseUsers);
 
 
 
+// Маємо масив з продуктами
+
+let products = [
+    {id: 1,title:'Milk',price: 25},
+    {id: 2,title:'Juice',price: 36},
+    {id: 3,title:'Tomato',price: 56},
+    {id: 4,title:'Tea',price: 40}
+];
+
+for (let product of products) {
+
+    // Виведемо назви і ціни продуктів в div блоки
+    let divProduct = document.createElement('div');
+    divProduct.innerText = `${product.title} - ${product.price}$`;
+    document.body.append(divProduct);
+
+    // Додамо блокам кнопки з функцією "додати" (add)
+    let addButton = document.createElement('button');
+    addButton.innerText = 'add';
+    divProduct.append(addButton);
+
+    // Додамо кнопці функціонал
+    addButton.onclick = function () {
+        let products = localStorage.getItem('products');      // звернемось до lS і до його ключа products (якщо такої ячейки немає, то нам поверне null/undefined)
+        if (!products) {                                           // задамо умову, що якщо ячейки products немає, або вона порожня
+            products = [];                                         // то products повинні виглядати як масив
+            products.push(product);                                // і в цей масив ми будемо пушити той продукт, який ітеруємо
+            let stringifyArr = JSON.stringify(products);           // тепер цей масив перетворюємо на стрінгу
+            localStorage.setItem('products',stringifyArr);         // і кладемо його в localStorage
+            // однак ця дія буде виконуватись один раз, бо після цього у нас буде масив products і протокол if не буде виконуватись; треба додати ще функціонал
+        } else {
+            let realProdArr = JSON.parse(products);                 // перетворюємос стрінгу (113 рядок) на звичайний обʼєкт
+            realProdArr.push(product);                              // пушимо інформацію про продукт який ітерували
+            localStorage.setItem('products',JSON.stringify(realProdArr)); // ! Це дозволить нам додавати до ключа products в його значення (value) інші продукти, а не
+                                                                        // створювати нові
+        }
+
+    }
+}
+
+
+
+
 
 
