@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User details</title>
+</head>
+<body>
+<h1>Details</h1>
+
+
+<script>
+    //На странице user-details.html:
+    //Вывести всю, без исключения, информацию про объект user на кнопку/ссылку которого был совершен клик ранее.
+    //Добавить кнопку "post of current user", при клике на которую, появляются title всех постов текущего юзера
+    //(для получения постов используйте эндпоинт https://jsonplaceholder.typicode.com/users/USER_ID/posts
+    //Каждому посту добавить кнопку/ссылку, при клике на которую происходит переход на страницу post-details.html,
+    // которая имеет детальную информацию про текущий пост.
+
+    let url = new URL(location.href);
+    let user = JSON.parse(url.searchParams.get('data'));
+
+// let writeInfo = (arg) => {
+//     for (let item in arg) {
+//         if (typeof arg[item] === 'object') {
+//             for (let i in arg[item]) {
+//                 document.write(`<p>${i} - ${arg[item][i]}</p>`)
+//                 if (typeof arg[item][i] === 'object') {
+//                     for (let iKey in arg[item][i]) {
+//                         document.write(`<p>${iKey} - ${arg[item][i][iKey]}</p>`);
+//                         if (typeof arg[item][i][iKey] === 'object') {
+//                             for (let x in arg[item][i][iKey]) {
+//                                 document.write(`<p>${x} - ${arg[item][i][iKey][x]}</p>`);
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//         document.write(`<p>${item} - ${arg[item]}</p>`)
+//     }
+// }
+//     writeInfo(user);
+
+    let writeInfo = (arg) => {
+        let div = document.createElement('div');
+        div.classList.add('userDetails')
+        document.body.appendChild(div);
+        for (let item in arg) {
+            let p = document.createElement('p');
+            p.innerText =`${item} - ${arg[item]}`;
+            div.appendChild(p);
+            if (typeof arg[item] === 'object') {
+                p.innerText = `${item}:`;
+                for (let i in arg[item]) {
+                    let innerP = document.createElement('p');
+                    div.append(innerP);
+                    innerP.innerText = `${i} - ${arg[item][i]}`;
+                    if (typeof arg[item][i] === 'object') {
+                        innerP.innerText = `${i}:`;
+                        for (let iKey in arg[item][i]) {
+                            let inInnerP = document.createElement('p');
+                            div.append(inInnerP);
+                            inInnerP.innerText = `${iKey} - ${arg[item][i][iKey]}`;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    writeInfo(user);
+
+
+</script>
+</body>
+</html>

@@ -101,7 +101,27 @@ createBlock(bigArray)
 
 
 
-
+// let writeInfo = (arg) => {
+//     for (let item in arg) {
+//         if (typeof arg[item] === 'object') {
+//             for (let i in arg[item]) {
+//                 document.write(`<p>${i} - ${arg[item][i]}</p>`)
+//                 if (typeof arg[item][i] === 'object') {
+//                     for (let iKey in arg[item][i]) {
+//                         document.write(`<p>${iKey} - ${arg[item][i][iKey]}</p>`);
+//                         if (typeof arg[item][i][iKey] === 'object') {
+//                             for (let x in arg[item][i][iKey]) {
+//                                 document.write(`<p>${x} - ${arg[item][i][iKey][x]}</p>`);
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//         document.write(`<p>${item} - ${arg[item]}</p>`)
+//     }
+// }
+// writeInfo(user);
 
 
 
