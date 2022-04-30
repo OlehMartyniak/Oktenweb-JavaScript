@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post details</title>
+</head>
+<body>
+
+<h1>Post details</h1>
+
+<div class="post"></div>
+
+
+
+<script>
+    // На странице post-details.html:
+    // Вывести всю, без исключения, информацию про объект post на кнопку/ссылку которого был совершен клик ранее.
+    // Ниже информации про пост, вывести все комментарии текущего поста (эндпоинт для получения информации
+    // - https://jsonplaceholder.typicode.com/posts/POST_ID/comments)
+
+    let url = new URL(location.href);
+    let post = JSON.parse(url.searchParams.get('data'));
+    console.log(post);
+
+    let postDiv = document.getElementsByClassName('post')[0];
+
+    for (let obj in post) {
+        let p = document.createElement('p');
+        p.innerText = `${obj} - ${post[obj]}`;
+        postDiv.append(p);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
